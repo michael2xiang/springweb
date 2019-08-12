@@ -1,1 +1,1 @@
-练习spring boot mybatis使用
+练习spring boot + mybatis使用
