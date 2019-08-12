@@ -1,0 +1,94 @@
+2019-08-12 21:14:01.239  INFO 12760 --- [main] com.imooc.web1.Web1Application           : Starting Web1Application on MichaelHome with PID 12760 (F:\06_code_train\web1\target\classes started by admin in F:\06_code_train\web1)
+2019-08-12 21:14:01.245  INFO 12760 --- [main] com.imooc.web1.Web1Application           : No active profile set, falling back to default profiles: default
+2019-08-12 21:14:02.369  INFO 12760 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8081 (http)
+2019-08-12 21:14:02.392  INFO 12760 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-08-12 21:14:02.393  INFO 12760 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.21]
+2019-08-12 21:14:02.516  INFO 12760 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/web1]   : Initializing Spring embedded WebApplicationContext
+2019-08-12 21:14:02.516  INFO 12760 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1227 ms
+2019-08-12 21:14:02.586  INFO 12760 --- [MLog-Init-Reporter] com.mchange.v2.log.MLog                  : MLog clients using slf4j logging.
+2019-08-12 21:14:02.620  INFO 12760 --- [main] com.mchange.v2.c3p0.C3P0Registry         : Initializing c3p0-0.9.5.4 [built 23-March-2019 23:00:48 -0700; debug? true; trace: 10]
+2019-08-12 21:14:03.039  INFO 12760 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2019-08-12 21:14:03.338  INFO 12760 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8081 (http) with context path '/web1'
+2019-08-12 21:14:03.343  INFO 12760 --- [main] com.imooc.web1.Web1Application           : Started Web1Application in 2.604 seconds (JVM running for 4.107)
+2019-08-12 21:14:03.345  INFO 12760 --- [main] com.imooc.web1.Web1Application           : webstart
+2019-08-12 21:14:40.425  INFO 12760 --- [http-nio-8081-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/web1]   : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2019-08-12 21:14:40.425  INFO 12760 --- [http-nio-8081-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2019-08-12 21:14:40.435  INFO 12760 --- [http-nio-8081-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 10 ms
+2019-08-12 21:15:23.415  INFO 5248 --- [main] com.imooc.web1.Web1Application           : Starting Web1Application on MichaelHome with PID 5248 (F:\06_code_train\web1\target\classes started by admin in F:\06_code_train\web1)
+2019-08-12 21:15:23.418  INFO 5248 --- [main] com.imooc.web1.Web1Application           : No active profile set, falling back to default profiles: default
+2019-08-12 21:15:24.394  INFO 5248 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8081 (http)
+2019-08-12 21:15:24.412  INFO 5248 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-08-12 21:15:24.413  INFO 5248 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.21]
+2019-08-12 21:15:24.515  INFO 5248 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/web1]   : Initializing Spring embedded WebApplicationContext
+2019-08-12 21:15:24.515  INFO 5248 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1058 ms
+2019-08-12 21:15:24.583  INFO 5248 --- [MLog-Init-Reporter] com.mchange.v2.log.MLog                  : MLog clients using slf4j logging.
+2019-08-12 21:15:24.609  INFO 5248 --- [main] com.mchange.v2.c3p0.C3P0Registry         : Initializing c3p0-0.9.5.4 [built 23-March-2019 23:00:48 -0700; debug? true; trace: 10]
+2019-08-12 21:15:24.951  INFO 5248 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2019-08-12 21:15:25.221  INFO 5248 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8081 (http) with context path '/web1'
+2019-08-12 21:15:25.224  INFO 5248 --- [main] com.imooc.web1.Web1Application           : Started Web1Application in 2.17 seconds (JVM running for 3.251)
+2019-08-12 21:15:25.226  INFO 5248 --- [main] com.imooc.web1.Web1Application           : webstart
+2019-08-12 21:15:34.532  INFO 5248 --- [http-nio-8081-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/web1]   : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2019-08-12 21:15:34.532  INFO 5248 --- [http-nio-8081-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2019-08-12 21:15:34.539  INFO 5248 --- [http-nio-8081-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 7 ms
+2019-08-12 21:16:40.803  INFO 12020 --- [main] com.imooc.web1.Web1Application           : Starting Web1Application on MichaelHome with PID 12020 (F:\06_code_train\web1\target\classes started by admin in F:\06_code_train\web1)
+2019-08-12 21:16:40.805  INFO 12020 --- [main] com.imooc.web1.Web1Application           : No active profile set, falling back to default profiles: default
+2019-08-12 21:16:41.956  INFO 12020 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8081 (http)
+2019-08-12 21:16:41.975  INFO 12020 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-08-12 21:16:41.975  INFO 12020 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.21]
+2019-08-12 21:16:42.092  INFO 12020 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/web1]   : Initializing Spring embedded WebApplicationContext
+2019-08-12 21:16:42.092  INFO 12020 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1250 ms
+2019-08-12 21:16:42.175  INFO 12020 --- [MLog-Init-Reporter] com.mchange.v2.log.MLog                  : MLog clients using slf4j logging.
+2019-08-12 21:16:42.209  INFO 12020 --- [main] com.mchange.v2.c3p0.C3P0Registry         : Initializing c3p0-0.9.5.4 [built 23-March-2019 23:00:48 -0700; debug? true; trace: 10]
+2019-08-12 21:16:42.583  INFO 12020 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2019-08-12 21:16:42.898  INFO 12020 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8081 (http) with context path '/web1'
+2019-08-12 21:16:42.902  INFO 12020 --- [main] com.imooc.web1.Web1Application           : Started Web1Application in 2.496 seconds (JVM running for 3.641)
+2019-08-12 21:16:42.905  INFO 12020 --- [main] com.imooc.web1.Web1Application           : webstart
+2019-08-12 21:17:27.986  INFO 12020 --- [http-nio-8081-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/web1]   : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2019-08-12 21:17:27.986  INFO 12020 --- [http-nio-8081-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2019-08-12 21:17:27.993  INFO 12020 --- [http-nio-8081-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 7 ms
+2019-08-12 21:18:04.103  INFO 9188 --- [main] com.imooc.web1.Web1Application           : Starting Web1Application on MichaelHome with PID 9188 (F:\06_code_train\web1\target\classes started by admin in F:\06_code_train\web1)
+2019-08-12 21:18:04.106  INFO 9188 --- [main] com.imooc.web1.Web1Application           : No active profile set, falling back to default profiles: default
+2019-08-12 21:18:05.344  INFO 9188 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8081 (http)
+2019-08-12 21:18:05.376  INFO 9188 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-08-12 21:18:05.376  INFO 9188 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.21]
+2019-08-12 21:18:05.547  INFO 9188 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/web1]   : Initializing Spring embedded WebApplicationContext
+2019-08-12 21:18:05.549  INFO 9188 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1395 ms
+2019-08-12 21:18:05.658  INFO 9188 --- [MLog-Init-Reporter] com.mchange.v2.log.MLog                  : MLog clients using slf4j logging.
+2019-08-12 21:18:05.690  INFO 9188 --- [main] com.mchange.v2.c3p0.C3P0Registry         : Initializing c3p0-0.9.5.4 [built 23-March-2019 23:00:48 -0700; debug? true; trace: 10]
+2019-08-12 21:18:06.288  INFO 9188 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2019-08-12 21:18:06.572  INFO 9188 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8081 (http) with context path '/web1'
+2019-08-12 21:18:06.576  INFO 9188 --- [main] com.imooc.web1.Web1Application           : Started Web1Application in 2.905 seconds (JVM running for 4.835)
+2019-08-12 21:18:06.578  INFO 9188 --- [main] com.imooc.web1.Web1Application           : webstart
+2019-08-12 21:18:10.672  INFO 9188 --- [http-nio-8081-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/web1]   : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2019-08-12 21:18:10.673  INFO 9188 --- [http-nio-8081-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2019-08-12 21:18:10.680  INFO 9188 --- [http-nio-8081-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 7 ms
+2019-08-12 21:19:01.963  INFO 9188 --- [Thread-8] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2019-08-12 21:19:05.870  INFO 2696 --- [main] com.imooc.web1.Web1Application           : Starting Web1Application on MichaelHome with PID 2696 (F:\06_code_train\web1\target\classes started by admin in F:\06_code_train\web1)
+2019-08-12 21:19:05.872  INFO 2696 --- [main] com.imooc.web1.Web1Application           : No active profile set, falling back to default profiles: default
+2019-08-12 21:19:08.195  INFO 2696 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8081 (http)
+2019-08-12 21:19:08.233  INFO 2696 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-08-12 21:19:08.233  INFO 2696 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.21]
+2019-08-12 21:19:08.425  INFO 2696 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/web1]   : Initializing Spring embedded WebApplicationContext
+2019-08-12 21:19:08.426  INFO 2696 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 2517 ms
+2019-08-12 21:19:08.508  INFO 2696 --- [MLog-Init-Reporter] com.mchange.v2.log.MLog                  : MLog clients using slf4j logging.
+2019-08-12 21:19:08.725  INFO 2696 --- [main] com.mchange.v2.c3p0.C3P0Registry         : Initializing c3p0-0.9.5.4 [built 23-March-2019 23:00:48 -0700; debug? true; trace: 10]
+2019-08-12 21:19:09.276  INFO 2696 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2019-08-12 21:19:09.543  INFO 2696 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8081 (http) with context path '/web1'
+2019-08-12 21:19:09.546  INFO 2696 --- [main] com.imooc.web1.Web1Application           : Started Web1Application in 4.268 seconds (JVM running for 6.401)
+2019-08-12 21:19:09.549  INFO 2696 --- [main] com.imooc.web1.Web1Application           : webstart
+2019-08-12 21:19:23.266  INFO 7692 --- [main] com.imooc.web1.Web1Application           : Starting Web1Application on MichaelHome with PID 7692 (F:\06_code_train\web1\target\classes started by admin in F:\06_code_train\web1)
+2019-08-12 21:19:23.268  INFO 7692 --- [main] com.imooc.web1.Web1Application           : No active profile set, falling back to default profiles: default
+2019-08-12 21:19:24.284  INFO 7692 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8081 (http)
+2019-08-12 21:19:24.304  INFO 7692 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-08-12 21:19:24.304  INFO 7692 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.21]
+2019-08-12 21:19:24.411  INFO 7692 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/web1]   : Initializing Spring embedded WebApplicationContext
+2019-08-12 21:19:24.411  INFO 7692 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1099 ms
+2019-08-12 21:19:24.476  INFO 7692 --- [MLog-Init-Reporter] com.mchange.v2.log.MLog                  : MLog clients using slf4j logging.
+2019-08-12 21:19:24.503  INFO 7692 --- [main] com.mchange.v2.c3p0.C3P0Registry         : Initializing c3p0-0.9.5.4 [built 23-March-2019 23:00:48 -0700; debug? true; trace: 10]
+2019-08-12 21:19:24.846  INFO 7692 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2019-08-12 21:19:25.206  INFO 7692 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8081 (http) with context path '/web1'
+2019-08-12 21:19:25.209  INFO 7692 --- [main] com.imooc.web1.Web1Application           : Started Web1Application in 2.293 seconds (JVM running for 3.405)
+2019-08-12 21:19:25.211  INFO 7692 --- [main] com.imooc.web1.Web1Application           : webstart
+2019-08-12 21:19:38.009  INFO 7692 --- [http-nio-8081-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/web1]   : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2019-08-12 21:19:38.009  INFO 7692 --- [http-nio-8081-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2019-08-12 21:19:38.016  INFO 7692 --- [http-nio-8081-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 7 ms
