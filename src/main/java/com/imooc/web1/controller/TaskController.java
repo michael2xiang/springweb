@@ -7,7 +7,8 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
-@RestController(value = "/task")
+//@RestController(value = "/task")
+@RestController
 public class TaskController {
 
     @Autowired

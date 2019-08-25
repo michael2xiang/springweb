@@ -1,17 +1,17 @@
 package com.imooc.web1.response;
 
-public class CommenReturnType {
+public class CommonReturnType {
     private String status;
     private Object data;
 
-    public static CommenReturnType create(Object result)
+    public static CommonReturnType create(Object result)
     {
-        return CommenReturnType.create(result,"success");
+        return CommonReturnType.create(result,"success");
     }
 
-    public static CommenReturnType create(Object result,String status)
+    public static CommonReturnType create(Object result,String status)
     {
-        CommenReturnType type = new CommenReturnType();
+        CommonReturnType type = new CommonReturnType();
         type.setData(result);
         type.setStatus(status);
         return type;
