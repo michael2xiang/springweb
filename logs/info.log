@@ -76,3 +76,60 @@
 2019-11-07 10:46:39.309  INFO 80 --- [main] com.imooc.web1.dao.Stream                : Started Stream in 2.528 seconds (JVM running for 3.237)
 2019-11-07 10:46:39.458  INFO 80 --- [main] com.imooc.web1.dao.Stream                : strList:[abc, bc, efg, abcd, jkl]
 2019-11-07 10:46:39.463  INFO 80 --- [Thread-2] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2019-11-07 14:41:35.811  INFO 22192 --- [main] com.imooc.web1.JodaTime                  : Starting JodaTime on GZIT482 with PID 22192 (started by xiangzhenwen in D:\09_git_hub\springweb)
+2019-11-07 14:41:35.816  INFO 22192 --- [main] com.imooc.web1.JodaTime                  : No active profile set, falling back to default profiles: default
+2019-11-07 14:41:36.622  INFO 22192 --- [MLog-Init-Reporter] com.mchange.v2.log.MLog                  : MLog clients using slf4j logging.
+2019-11-07 14:41:36.928  INFO 22192 --- [main] com.mchange.v2.c3p0.C3P0Registry         : Initializing c3p0-0.9.5.4 [built 23-March-2019 23:00:48 -0700; debug? true; trace: 10]
+2019-11-07 14:41:37.725  INFO 22192 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2019-11-07 14:41:38.067  INFO 22192 --- [main] com.imooc.web1.JodaTime                  : Started JodaTime in 2.593 seconds (JVM running for 3.328)
+2019-11-07 14:41:38.242  INFO 22192 --- [main] com.imooc.web1.JodaTime                  : 2001-03-03 19:54:54
+2019-11-07 14:41:38.247  INFO 22192 --- [Thread-2] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2019-11-07 14:54:07.424  INFO 21912 --- [main] com.imooc.web1.JodaTime                  : Starting JodaTime on GZIT482 with PID 21912 (started by xiangzhenwen in D:\09_git_hub\springweb)
+2019-11-07 14:54:07.425  INFO 21912 --- [main] com.imooc.web1.JodaTime                  : No active profile set, falling back to default profiles: default
+2019-11-07 14:54:08.276  INFO 21912 --- [MLog-Init-Reporter] com.mchange.v2.log.MLog                  : MLog clients using slf4j logging.
+2019-11-07 14:54:08.580  INFO 21912 --- [main] com.mchange.v2.c3p0.C3P0Registry         : Initializing c3p0-0.9.5.4 [built 23-March-2019 23:00:48 -0700; debug? true; trace: 10]
+2019-11-07 14:54:09.326  INFO 21912 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2019-11-07 14:54:09.654  INFO 21912 --- [main] com.imooc.web1.JodaTime                  : Started JodaTime in 2.479 seconds (JVM running for 3.208)
+2019-11-07 14:54:09.843  INFO 21912 --- [Thread-2] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2019-11-07 14:55:24.130  INFO 20848 --- [main] com.imooc.web1.JodaTime                  : Starting JodaTime on GZIT482 with PID 20848 (started by xiangzhenwen in D:\09_git_hub\springweb)
+2019-11-07 14:55:24.131  INFO 20848 --- [main] com.imooc.web1.JodaTime                  : No active profile set, falling back to default profiles: default
+2019-11-07 14:55:24.937  INFO 20848 --- [MLog-Init-Reporter] com.mchange.v2.log.MLog                  : MLog clients using slf4j logging.
+2019-11-07 14:55:25.239  INFO 20848 --- [main] com.mchange.v2.c3p0.C3P0Registry         : Initializing c3p0-0.9.5.4 [built 23-March-2019 23:00:48 -0700; debug? true; trace: 10]
+2019-11-07 14:55:26.011  INFO 20848 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2019-11-07 14:55:26.342  INFO 20848 --- [main] com.imooc.web1.JodaTime                  : Started JodaTime in 2.555 seconds (JVM running for 3.278)
+2019-11-07 14:55:26.547  INFO 20848 --- [Thread-2] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2019-11-07 15:04:16.850  INFO 18752 --- [main] com.imooc.web1.JodaTime                  : Starting JodaTime on GZIT482 with PID 18752 (started by xiangzhenwen in D:\09_git_hub\springweb)
+2019-11-07 15:04:16.851  INFO 18752 --- [main] com.imooc.web1.JodaTime                  : No active profile set, falling back to default profiles: default
+2019-11-07 15:04:17.704  INFO 18752 --- [MLog-Init-Reporter] com.mchange.v2.log.MLog                  : MLog clients using slf4j logging.
+2019-11-07 15:04:18.003  INFO 18752 --- [main] com.mchange.v2.c3p0.C3P0Registry         : Initializing c3p0-0.9.5.4 [built 23-March-2019 23:00:48 -0700; debug? true; trace: 10]
+2019-11-07 15:04:18.769  INFO 18752 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2019-11-07 15:04:19.109  INFO 18752 --- [main] com.imooc.web1.JodaTime                  : Started JodaTime in 2.537 seconds (JVM running for 3.262)
+2019-11-07 15:04:19.309  INFO 18752 --- [Thread-2] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2019-11-07 15:46:56.243  INFO 21932 --- [main] com.imooc.web1.StrToDate                 : Starting StrToDate on GZIT482 with PID 21932 (started by xiangzhenwen in D:\09_git_hub\springweb)
+2019-11-07 15:46:56.245  INFO 21932 --- [main] com.imooc.web1.StrToDate                 : No active profile set, falling back to default profiles: default
+2019-11-07 15:46:57.058  INFO 21932 --- [MLog-Init-Reporter] com.mchange.v2.log.MLog                  : MLog clients using slf4j logging.
+2019-11-07 15:46:57.349  INFO 21932 --- [main] com.mchange.v2.c3p0.C3P0Registry         : Initializing c3p0-0.9.5.4 [built 23-March-2019 23:00:48 -0700; debug? true; trace: 10]
+2019-11-07 15:46:58.121  INFO 21932 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2019-11-07 15:46:58.452  INFO 21932 --- [main] com.imooc.web1.StrToDate                 : Started StrToDate in 2.473 seconds (JVM running for 3.198)
+2019-11-07 15:46:58.594  INFO 21932 --- [Thread-2] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2019-11-07 15:53:46.983  INFO 18312 --- [main] com.imooc.web1.StrToDate                 : Starting StrToDate on GZIT482 with PID 18312 (started by xiangzhenwen in D:\09_git_hub\springweb)
+2019-11-07 15:53:46.987  INFO 18312 --- [main] com.imooc.web1.StrToDate                 : No active profile set, falling back to default profiles: default
+2019-11-07 15:53:47.829  INFO 18312 --- [MLog-Init-Reporter] com.mchange.v2.log.MLog                  : MLog clients using slf4j logging.
+2019-11-07 15:53:48.126  INFO 18312 --- [main] com.mchange.v2.c3p0.C3P0Registry         : Initializing c3p0-0.9.5.4 [built 23-March-2019 23:00:48 -0700; debug? true; trace: 10]
+2019-11-07 15:53:48.919  INFO 18312 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2019-11-07 15:53:49.245  INFO 18312 --- [main] com.imooc.web1.StrToDate                 : Started StrToDate in 2.532 seconds (JVM running for 3.261)
+2019-11-07 15:53:49.393  INFO 18312 --- [Thread-2] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2019-11-07 15:54:08.359  INFO 21016 --- [main] com.imooc.web1.StrToDate                 : Starting StrToDate on GZIT482 with PID 21016 (started by xiangzhenwen in D:\09_git_hub\springweb)
+2019-11-07 15:54:08.360  INFO 21016 --- [main] com.imooc.web1.StrToDate                 : No active profile set, falling back to default profiles: default
+2019-11-07 15:54:09.239  INFO 21016 --- [MLog-Init-Reporter] com.mchange.v2.log.MLog                  : MLog clients using slf4j logging.
+2019-11-07 15:54:09.538  INFO 21016 --- [main] com.mchange.v2.c3p0.C3P0Registry         : Initializing c3p0-0.9.5.4 [built 23-March-2019 23:00:48 -0700; debug? true; trace: 10]
+2019-11-07 15:54:10.329  INFO 21016 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2019-11-07 15:54:10.665  INFO 21016 --- [main] com.imooc.web1.StrToDate                 : Started StrToDate in 2.565 seconds (JVM running for 3.305)
+2019-11-07 15:54:10.813  INFO 21016 --- [Thread-2] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2019-11-07 16:00:51.508  INFO 22432 --- [main] com.imooc.web1.StrToDate                 : Starting StrToDate on GZIT482 with PID 22432 (started by xiangzhenwen in D:\09_git_hub\springweb)
+2019-11-07 16:00:51.509  INFO 22432 --- [main] com.imooc.web1.StrToDate                 : No active profile set, falling back to default profiles: default
+2019-11-07 16:00:52.376  INFO 22432 --- [MLog-Init-Reporter] com.mchange.v2.log.MLog                  : MLog clients using slf4j logging.
+2019-11-07 16:00:52.682  INFO 22432 --- [main] com.mchange.v2.c3p0.C3P0Registry         : Initializing c3p0-0.9.5.4 [built 23-March-2019 23:00:48 -0700; debug? true; trace: 10]
+2019-11-07 16:00:53.457  INFO 22432 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2019-11-07 16:00:53.795  INFO 22432 --- [main] com.imooc.web1.StrToDate                 : Started StrToDate in 2.579 seconds (JVM running for 3.33)
+2019-11-07 16:00:53.945  INFO 22432 --- [Thread-2] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
