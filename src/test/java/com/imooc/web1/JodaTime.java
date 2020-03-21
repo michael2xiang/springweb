@@ -57,7 +57,8 @@ public class JodaTime {
     {
         DateTime dateTime = new DateTime(2000, 1, 1, 0, 0, 0, 0);
         DateTime after = dateTime.plusYears(1).plusMonths(2).plusDays(3).minusHours(4).minusMinutes(5).minusSeconds(6);
-        log.info(after.toString("yyyy-MM-dd HH:mm:ss"));
+
+//        log.info(after.toString("yyyy-MM-dd HH:mm:ss"));
     }
 
 

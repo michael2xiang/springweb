@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.imooc.web1.dao.CoffeeDao">
+    <select id="getAll" resultType="com.imooc.web1.entity.Coffee">
+        select name, price, create_time, update_time from t_coffee
+    </select>
+    <update id="update"  parameterType="com.imooc.web1.entity.Coffee" >
+        update t_coffee
+        <set>
+            <if test="name!=null" > name=#{name},</if>
+            <if test="price!=0.0" > price=#{price},</if>
+            <if test="update_time!=null" > update_time=#{update_time},</if>
+        </set>
+        where id=#{id}
+
+    </update>
+    <select id="getById" resultType="com.imooc.web1.entity.Coffee">
+         select name, price, create_time, update_time from t_coffee
+         where id=#{id}
+    </select>
+</mapper>
