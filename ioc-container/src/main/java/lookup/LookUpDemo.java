@@ -1,7 +1,7 @@
 package lookup;
 
 import lookup.annotation.MyAnnotation;
-import lookup.model.User;
+import model.User;
 import org.springframework.beans.factory.BeanFactory;
 import org.springframework.beans.factory.ListableBeanFactory;
 import org.springframework.beans.factory.ObjectFactory;
@@ -10,7 +10,7 @@ import org.springframework.context.support.ClassPathXmlApplicationContext;
 import java.util.Map;
 
 
-public class TestRun {
+public class LookUpDemo {
     public static void main(String[] args) {
         BeanFactory beanFactory = new ClassPathXmlApplicationContext("classpath:/bean.xml");
 

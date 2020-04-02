@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans https://www.springframework.org/schema/beans/spring-beans.xsd">
+
+
+    <import resource="bean.xml"></import>
+    <bean id="userRepository" class="injection.repository.UserRepository" autowire="byType" >
+<!--        <property name="userList">-->
+<!--            <util:list>-->
+<!--                <ref bean="user"></ref>-->
+<!--                <ref bean="superUser"></ref>-->
+<!--            </util:list>-->
+<!--        </property>-->
+    </bean>
+
+
+
+
+</beans>

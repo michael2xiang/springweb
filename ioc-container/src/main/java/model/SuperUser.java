@@ -1,4 +1,4 @@
-package lookup.model;
+package model;
 
 import lookup.annotation.MyAnnotation;
 

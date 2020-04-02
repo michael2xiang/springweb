@@ -4,11 +4,11 @@
        xsi:schemaLocation="http://www.springframework.org/schema/beans
         https://www.springframework.org/schema/beans/spring-beans.xsd">
 
-    <bean id="user" class="lookup.model.User">
+    <bean id="user" class="model.User">
         <property name="id" value="1"></property>
         <property name="name" value="aaa"></property>
     </bean>
-    <bean id="superUser" class="lookup.model.SuperUser" parent="user" primary="true">
+    <bean id="superUser" class="model.SuperUser" parent="user" primary="true">
         <property name="address" value="广州"></property>
     </bean>
 
