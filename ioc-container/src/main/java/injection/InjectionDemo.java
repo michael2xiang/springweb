@@ -10,24 +10,24 @@ import org.springframework.core.env.Environment;
 
 public class InjectionDemo {
     public static void main(String[] args) {
-        BeanFactory beanFactory = new ClassPathXmlApplicationContext("classpath:/bean-injection.xml");
+        BeanFactory applicationContextCreate = new ClassPathXmlApplicationContext("classpath:/bean-injection.xml");
 
-        UserRepository userRepository = (UserRepository) beanFactory.getBean("userRepository");
+        UserRepository userRepository = (UserRepository) applicationContextCreate.getBean("userRepository");
         System.out.println(userRepository.getUserList().toString());
 
         BeanFactory beanFactoryInjection = userRepository.getBeanFactory();
         ObjectFactory<ApplicationContext> objectFactory1 = userRepository.getApplicationContextObjectFactory();
-        ApplicationContext applicationContext = objectFactory1.getObject();
+        ApplicationContext applicationContextInjection = objectFactory1.getObject();
 
         System.out.println("注入的beanFactory：" + beanFactoryInjection.toString() + ";hashCode=" + beanFactoryInjection.hashCode());
-        System.out.println("新建的ApplicationContext：" + beanFactory.toString() + ";hashCode=" + beanFactory.hashCode());
-        System.out.println("注入的ApplicationContext：" + applicationContext.toString() + ";hashCode=" + applicationContext.hashCode());
+        System.out.println("新建的ApplicationContext：" + applicationContextCreate.toString() + ";hashCode=" + applicationContextCreate.hashCode());
+        System.out.println("注入的ApplicationContext：" + applicationContextInjection.toString() + ";hashCode=" + applicationContextInjection.hashCode());
 
         ObjectFactory<User> objectFactory = userRepository.getUserObjectFactory();
         User user = objectFactory.getObject();
         System.out.println("延迟注入："+user);
 
-        Environment environment = beanFactory.getBean(Environment.class);
+        Environment environment = applicationContextCreate.getBean(Environment.class);
         System.out.println("内建bean："+environment);
     }
 }

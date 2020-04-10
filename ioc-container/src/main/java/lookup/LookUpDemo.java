@@ -5,6 +5,7 @@ import model.User;
 import org.springframework.beans.factory.BeanFactory;
 import org.springframework.beans.factory.ListableBeanFactory;
 import org.springframework.beans.factory.ObjectFactory;
+import org.springframework.beans.factory.ObjectProvider;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 import java.util.Map;
@@ -30,6 +31,8 @@ public class LookUpDemo {
         //通过类型实时查找集合
         if (beanFactory instanceof ListableBeanFactory) {
             ListableBeanFactory listableBeanFactory = (ListableBeanFactory) beanFactory;
+            ObjectProvider a = listableBeanFactory.getBeanProvider(User.class);
+
             Map<String, User> map = listableBeanFactory.getBeansOfType(User.class);
             System.out.println("通过类型实时查找集合:" + map.toString());
         }
