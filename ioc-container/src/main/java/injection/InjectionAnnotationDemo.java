@@ -1,28 +1,53 @@
 package injection;
 
-import IocContain.ApplicationContextWithAnnotationAsIoc;
 import model.User;
 import org.springframework.beans.factory.BeanFactory;
 import org.springframework.beans.factory.ListableBeanFactory;
+import org.springframework.beans.factory.ObjectFactory;
+import org.springframework.beans.factory.ObjectProvider;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 import org.springframework.context.annotation.Bean;
 
 import java.util.Map;
+import java.util.Set;
 
 public class InjectionAnnotationDemo {
     public static void main(String[] args) {
         AnnotationConfigApplicationContext annotationConfigApplicationContext = new AnnotationConfigApplicationContext();
         annotationConfigApplicationContext.register(InjectionAnnotationDemo.class);
         annotationConfigApplicationContext.refresh();
+
+        InjectionAnnotationDemo injectionAnnotationDemo = (InjectionAnnotationDemo) annotationConfigApplicationContext.getBean(InjectionAnnotationDemo.class);
+
+        System.out.println("不安全的延迟bean，没|多个 bean报错:" + injectionAnnotationDemo.users.getObject());
+        System.out.println("安全的延迟bean，没bean不会报错，多个报错:" + injectionAnnotationDemo.users.getIfAvailable());
+
+        injectionAnnotationDemo.users.forEach(System.out::println);
         lookupBean(annotationConfigApplicationContext);
     }
 
+    @Autowired
+    @Qualifier(value = "user") //限定 bean id
+    private ObjectProvider<User> users; //支持单一，集合bean
+
+    @Autowired
+    @Qualifier(value = "user") //限定 bean id
+    private ObjectFactory<User> objectFactoryUser; //单一
+
+    @Autowired
+    @Qualifier(value = "user") //限定 bean id
+    private ObjectFactory<Set<User>> objectFactoryUserSet;//集合
+
+
     @Bean
+    @Qualifier
     public User user()
     {
         User user = new User();
-        user.setId(22L);
-        user.setName("通过注解定义的bean");
+        user.setId(11L);
+        user.setName("通过注解定义的bean11111");
         return  user;
     }
 
@@ -30,8 +55,8 @@ public class InjectionAnnotationDemo {
     public User user2()
     {
         User user = new User();
-        user.setId(33L);
-        user.setName("通过注解定义的bean3");
+        user.setId(22L);
+        user.setName("通过注解定义的bean2222");
         return  user;
     }
 
