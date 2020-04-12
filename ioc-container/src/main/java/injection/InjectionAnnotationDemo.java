@@ -9,6 +9,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Lazy;
 
 import java.util.Map;
 import java.util.Set;
@@ -21,12 +22,23 @@ public class InjectionAnnotationDemo {
 
         InjectionAnnotationDemo injectionAnnotationDemo = (InjectionAnnotationDemo) annotationConfigApplicationContext.getBean(InjectionAnnotationDemo.class);
 
-        System.out.println("不安全的延迟bean，没|多个 bean报错:" + injectionAnnotationDemo.users.getObject());
-        System.out.println("安全的延迟bean，没bean不会报错，多个报错:" + injectionAnnotationDemo.users.getIfAvailable());
+        System.out.println("实时注入，调试@Autowired实现源码:" + injectionAnnotationDemo.user);
 
-        injectionAnnotationDemo.users.forEach(System.out::println);
-        lookupBean(annotationConfigApplicationContext);
+//        System.out.println("不安全的延迟bean，没|多个 bean报错:" + injectionAnnotationDemo.users.getObject());
+//        System.out.println("不安全的延迟 lazy beanUser，没bean不会报错，多个报错:" +injectionAnnotationDemo.lazyUser.toString());
+//        System.out.println("安全的延迟bean，没bean不会报错，多个报错:" + injectionAnnotationDemo.users.getIfAvailable());
+//        injectionAnnotationDemo.users.forEach(System.out::println);
+//        lookupBean(annotationConfigApplicationContext);
     }
+
+    @Autowired
+    @Qualifier(value = "user") //限定 bean id
+    private User user;
+
+    @Autowired
+    @Lazy
+    @Qualifier(value = "user") //限定 bean id
+    private User lazyUser;
 
     @Autowired
     @Qualifier(value = "user") //限定 bean id
