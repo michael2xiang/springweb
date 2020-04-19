@@ -8,6 +8,11 @@ import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 import org.springframework.core.env.Environment;
 
+/**
+ * beanFactory 与 ApplicationContext 的异同，
+ * beanFactory是基本的ioc容器
+ * ApplicationContext 包装了beanFactory的新class，增加web会用到的 事件，国际化多语言，本地资源，环境信息等
+ */
 public class InjectionDemo {
     public static void main(String[] args) {
         BeanFactory applicationContextCreate = new ClassPathXmlApplicationContext("classpath:/bean-injection.xml");

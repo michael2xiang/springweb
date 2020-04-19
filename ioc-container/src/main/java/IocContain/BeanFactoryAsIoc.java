@@ -3,6 +3,9 @@ package IocContain;
 import org.springframework.beans.factory.support.DefaultListableBeanFactory;
 import org.springframework.beans.factory.xml.XmlBeanDefinitionReader;
 
+/**
+ * 基本的BeanFactory ioc
+ */
 public class BeanFactoryAsIoc {
 
     public static void main(String[] args) {

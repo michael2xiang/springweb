@@ -6,6 +6,9 @@ import org.springframework.context.annotation.AnnotationConfigApplicationContext
 
 import javax.annotation.PostConstruct;
 
+/**
+ * 将外部对象加载到spring ioc容器，registerResolvableDependency
+ */
 public class ResolvableDependencyDemo {
 
     @Autowired
