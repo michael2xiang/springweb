@@ -10,7 +10,9 @@ import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 import java.util.Map;
 
-
+/**
+ * 依赖查找
+ */
 public class LookUpDemo {
     public static void main(String[] args) {
         BeanFactory beanFactory = new ClassPathXmlApplicationContext("classpath:/bean.xml");

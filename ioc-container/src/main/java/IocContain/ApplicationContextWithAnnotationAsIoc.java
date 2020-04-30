@@ -8,6 +8,9 @@ import org.springframework.context.annotation.Bean;
 
 import java.util.Map;
 
+/**
+ * 基于声明的ApplicationContext ioc
+ */
 public class ApplicationContextWithAnnotationAsIoc {
     public static void main(String[] args) {
         AnnotationConfigApplicationContext annotationConfigApplicationContext = new AnnotationConfigApplicationContext();

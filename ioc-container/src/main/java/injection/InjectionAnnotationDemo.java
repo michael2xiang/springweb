@@ -15,6 +15,9 @@ import org.springframework.util.Assert;
 import java.util.Map;
 import java.util.Set;
 
+/**
+ * 依赖注入，多个同类型bean限定加载，延迟注入，不存在是否报错
+ */
 public class InjectionAnnotationDemo {
     public static void main(String[] args) {
         Object[] componentClasses =null;
