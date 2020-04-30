@@ -10,12 +10,16 @@ import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Lazy;
+import org.springframework.util.Assert;
 
 import java.util.Map;
 import java.util.Set;
 
 public class InjectionAnnotationDemo {
     public static void main(String[] args) {
+        Object[] componentClasses =null;
+        Assert.notEmpty(componentClasses, "At least one component class must be specified");
+
         AnnotationConfigApplicationContext annotationConfigApplicationContext = new AnnotationConfigApplicationContext();
         annotationConfigApplicationContext.register(InjectionAnnotationDemo.class);
         annotationConfigApplicationContext.refresh();
@@ -29,6 +33,8 @@ public class InjectionAnnotationDemo {
 //        System.out.println("安全的延迟bean，没bean不会报错，多个报错:" + injectionAnnotationDemo.users.getIfAvailable());
 //        injectionAnnotationDemo.users.forEach(System.out::println);
 //        lookupBean(annotationConfigApplicationContext);
+
+        annotationConfigApplicationContext.close();
     }
 
     @Autowired
