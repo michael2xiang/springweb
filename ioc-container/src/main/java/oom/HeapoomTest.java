@@ -12,6 +12,11 @@ import java.net.InetSocketAddress;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * 堆内存溢出
+ * jdk13 jvm 参数配置
+ * -Xmx20m  -Xmn4m  -XX:+UseConcMarkSweepGC  -verbose:gc -Xlog:gc,gc+ref=debug,gc+heap=debug,gc+age=trace:file=/gc_%p.log:tags,uptime,time,level -Xlog:safepoint:file=/safepoint_%p.log:tags,uptime,time,level -XX:+HeapDumpOnOutOfMemoryError -XX:HeapDumpPath=/ -XX:ErrorFile=/hs_error_pid%p.log -XX:-OmitStackTraceInFastThrow
+ */
 public class HeapoomTest {
     public static final int _10MB = 1024 * 1024 * 50;
     static List<byte[]> byteList = new ArrayList<>();
