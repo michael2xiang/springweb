@@ -51,10 +51,7 @@ public class OutHeapOom {
                 decompress(bytes);
                 Thread.sleep(1);
             }
-
         }
-
-
     }
 
     public static int copy(InputStream input, OutputStream output) throws IOException {
@@ -67,11 +64,18 @@ public class OutHeapOom {
         long count = 0L;
         int n;
         for (; -1 != (n = input.read(buffer)); count += (long) n)
+        {
             output.write(buffer, 0, n);
-
+        }
         return count;
     }
 
+    /**
+     * 解压
+     * @param inputBytes
+     * @return
+     * @throws IOException
+     */
     private static String decompress(byte[] inputBytes) throws IOException {
         ByteArrayOutputStream out = new ByteArrayOutputStream();
         copy(new GZIPInputStream(new ByteArrayInputStream(inputBytes)), out);
@@ -81,6 +85,10 @@ public class OutHeapOom {
 
     private static OperatingSystemMXBean osmxb = (OperatingSystemMXBean) ManagementFactory.getOperatingSystemMXBean();
 
+    /**
+     * 获取内存使用占比
+     * @return
+     */
     private static int memoryLoad() {
         double totalVirtualMemory = osmxb.getTotalPhysicalMemorySize();
         double freePhysicalMemorySize = osmxb.getFreePhysicalMemorySize();
@@ -90,6 +98,12 @@ public class OutHeapOom {
         return percent;
     }
 
+    /**
+     * 压缩
+     * @param str
+     * @return
+     * @throws IOException
+     */
     private static byte[] compress(String str) throws IOException {
         ByteArrayOutputStream bos = new ByteArrayOutputStream();
         GZIPOutputStream gzip = new GZIPOutputStream(bos);
@@ -104,6 +118,11 @@ public class OutHeapOom {
         }
     }
 
+    /**
+     * 生成随机字符串
+     * @param strLength
+     * @return
+     */
     private static String randomString(int strLength) {
         Random rnd = ThreadLocalRandom.current();
         StringBuffer sb = new StringBuffer();
@@ -111,10 +130,10 @@ public class OutHeapOom {
             boolean isChar = (rnd.nextInt(2) % 2 == 0);
             if (isChar) {
                 int choice = rnd.nextInt(2) % 2 == 0 ? 65 : 97;
-                sb.append((choice + rnd.nextInt(26)));
+                sb.append("AAAAAA"+(choice + rnd.nextInt(26)));
 
             } else {
-                sb.append(rnd.nextInt(10));
+                sb.append("BBBBBB"+rnd.nextInt(10));
             }
         }
         return sb.toString();
