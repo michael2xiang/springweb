@@ -5,6 +5,9 @@
     <packaging>pom</packaging>
     <modules>
         <module>ioc-container</module>
+        <module>jvmDemo</module>
+        <module>jvm-demo</module>
+        <module>jvm-train</module>
     </modules>
     <parent>
         <groupId>org.springframework.boot</groupId>
