@@ -13,6 +13,9 @@ import java.io.InputStream;
  * 3 finally自己本身
  *
  * 编译器会自动加 any exception的捕获，默认的处理。
+ *
+ * javac ExceptionDemo.java
+ * javap -p -v  ExceptionDemo.class
  */
 public class ExceptionDemo {
     public void read() {
