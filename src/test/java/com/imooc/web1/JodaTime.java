@@ -20,8 +20,7 @@ public class JodaTime {
      * https://www.ibm.com/developerworks/cn/java/j-jodatime.html
      */
     @Test
-    public  void newObj()
-    {
+    public void newObj() {
         //方式一
         DateTime dateTime = new DateTime(2000, 1, 1, 0, 0, 0, 0);
 
@@ -35,7 +34,7 @@ public class JodaTime {
         //方式三 Calendar与 DateTime 互操作
         Calendar calendar = Calendar.getInstance();
         calendar.set(2000, Calendar.JANUARY, 1, 0, 0, 0);
-        DateTime datetimeFromCalendar= new DateTime(calendar);
+        DateTime datetimeFromCalendar = new DateTime(calendar);
 
         Calendar calendarFromDatetime = Calendar.getInstance();
         calendarFromDatetime.setTime(datetimeFromCalendar.toDate());
@@ -49,12 +48,11 @@ public class JodaTime {
 
         timeString = "2006-01-26T13:30:00";
         DateTime dateTimeFromStr3 = new DateTime(timeString);
-        System.out.println("dateTimeFromStr3:"+dateTimeFromStr3);
+        System.out.println("dateTimeFromStr3:" + dateTimeFromStr3);
     }
 
     @Test
-    public void plusOrMinus()
-    {
+    public void plusOrMinus() {
         DateTime dateTime = new DateTime(2000, 1, 1, 0, 0, 0, 0);
         DateTime after = dateTime.plusYears(1).plusMonths(2).plusDays(3).minusHours(4).minusMinutes(5).minusSeconds(6);
 

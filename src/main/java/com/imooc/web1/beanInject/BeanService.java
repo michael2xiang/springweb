@@ -6,20 +6,18 @@ import org.springframework.stereotype.Service;
 @Service
 //@Named("beanService")
 public class BeanService {
-    public BeanService()
-    {}
+    public BeanService() {
+    }
 
 
     private BeanDao beanDao;
 
     @Autowired
-    public BeanService(BeanDao beanDao)
-    {
+    public BeanService(BeanDao beanDao) {
         this.beanDao = beanDao;
     }
 
-    public void say()
-    {
+    public void say() {
         beanDao.say();
     }
 }

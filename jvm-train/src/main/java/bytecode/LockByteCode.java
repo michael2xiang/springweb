@@ -2,10 +2,10 @@ package bytecode;
 
 /**
  * 锁的字节码
- *
+ * <p>
  * 编译
  * javac LockByteCode.java
- *
+ * <p>
  * 查看字节码
  * javap -p -v LockByteCode.class
  */

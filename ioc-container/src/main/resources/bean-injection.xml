@@ -8,22 +8,20 @@
 
     <import resource="bean.xml"></import>
 
-    <bean id="userRepository" class="injection.repository.UserRepository"  autowire="byType">
-<!--        <property name="userList">-->
-<!--            <util:list>-->
-<!--                <ref bean="user"></ref>-->
-<!--                <ref bean="superUser"></ref>-->
-<!--            </util:list>-->
-<!--        </property>-->
-<!--        <property name="applicationContextObjectFactory"  ref="dependencyObjectProvider"></property>-->
+    <bean id="userRepository" class="injection.repository.UserRepository" autowire="byType">
+        <!--        <property name="userList">-->
+        <!--            <util:list>-->
+        <!--                <ref bean="user"></ref>-->
+        <!--                <ref bean="superUser"></ref>-->
+        <!--            </util:list>-->
+        <!--        </property>-->
+        <!--        <property name="applicationContextObjectFactory"  ref="dependencyObjectProvider"></property>-->
 
     </bean>
 
     <bean id="userService" class="injection.servcie.UserService">
         <property name="user" ref="user"></property>
     </bean>
-
-
 
 
 </beans>

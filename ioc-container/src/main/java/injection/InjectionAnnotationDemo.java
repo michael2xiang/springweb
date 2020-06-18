@@ -20,7 +20,7 @@ import java.util.Set;
  */
 public class InjectionAnnotationDemo {
     public static void main(String[] args) {
-        Object[] componentClasses =null;
+        Object[] componentClasses = null;
         Assert.notEmpty(componentClasses, "At least one component class must be specified");
 
         AnnotationConfigApplicationContext annotationConfigApplicationContext = new AnnotationConfigApplicationContext();
@@ -64,28 +64,23 @@ public class InjectionAnnotationDemo {
 
     @Bean
     @Qualifier
-    public User user()
-    {
+    public User user() {
         User user = new User();
         user.setId(11L);
         user.setName("通过注解定义的bean11111");
-        return  user;
+        return user;
     }
 
     @Bean
-    public User user2()
-    {
+    public User user2() {
         User user = new User();
         user.setId(22L);
         user.setName("通过注解定义的bean2222");
-        return  user;
+        return user;
     }
 
 
-
-
-    private static void lookupBean(BeanFactory beanFactory)
-    {
+    private static void lookupBean(BeanFactory beanFactory) {
         //通过类型实时查找集合
         if (beanFactory instanceof ListableBeanFactory) {
             ListableBeanFactory listableBeanFactory = (ListableBeanFactory) beanFactory;

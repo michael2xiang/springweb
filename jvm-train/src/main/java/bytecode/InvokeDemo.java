@@ -1,26 +1,28 @@
 package bytecode;
 
-interface ICustomClass{
-    default void  iDefaultMethod(){}
-    void  iMethod();
+interface ICustomClass {
+    default void iDefaultMethod() {
+    }
+
+    void iMethod();
 }
 
-abstract  class  AbsCustomClass{
+abstract class AbsCustomClass {
     abstract void absMethod();
 }
 
 /**
  * cd 到当前java文件目录
- *
+ * <p>
  * java -jar F:\技术工具\asmtools-7.0.jar jdec InvokeDemo.class
- *
+ * <p>
  * 编译
  * javac InvokeDemo.java
- *
+ * <p>
  * 查看字节码
  * javap -p -v InvokeDemo.class
  */
-public class InvokeDemo extends AbsCustomClass implements  ICustomClass {
+public class InvokeDemo extends AbsCustomClass implements ICustomClass {
     @Override
     public void iMethod() {
 
@@ -31,9 +33,14 @@ public class InvokeDemo extends AbsCustomClass implements  ICustomClass {
 
     }
 
-    static  void  staticMethod(){}
-    private  void privateMethod(){}
-    public void publicMethod(){}
+    static void staticMethod() {
+    }
+
+    private void privateMethod() {
+    }
+
+    public void publicMethod() {
+    }
 
     public static void main(String[] args) throws InterruptedException {
         InvokeDemo demo = new InvokeDemo();
@@ -45,9 +52,9 @@ public class InvokeDemo extends AbsCustomClass implements  ICustomClass {
         demo.absMethod();
         demo.iDefaultMethod();
 
-        ((AbsCustomClass)demo).absMethod();
-        ((ICustomClass)demo).iMethod();
-        ((ICustomClass)demo).iDefaultMethod();
+        ((AbsCustomClass) demo).absMethod();
+        ((ICustomClass) demo).iMethod();
+        ((ICustomClass) demo).iDefaultMethod();
 
         Thread.sleep(Integer.MAX_VALUE);
     }

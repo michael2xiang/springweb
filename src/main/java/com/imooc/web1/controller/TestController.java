@@ -14,11 +14,9 @@ import java.util.List;
 
 @RestController
 @RequestMapping(value = "/test")
-public class  TestController extends BaseController
-{
-    @RequestMapping(value = "/get",method = RequestMethod.GET)
-    public CommonReturnType get()
-    {
+public class TestController extends BaseController {
+    @RequestMapping(value = "/get", method = RequestMethod.GET)
+    public CommonReturnType get() {
         List<BookVO> bookVOList = new ArrayList<BookVO>();
         for (int i = 0; i < 10000; i++) {
             BookVO vo = new BookVO();
@@ -30,7 +28,7 @@ public class  TestController extends BaseController
         return CommonReturnType.create(bookVOList);
     }
 
-    @RequestMapping(value = "/updateTitle",method = RequestMethod.GET)
+    @RequestMapping(value = "/updateTitle", method = RequestMethod.GET)
     public CommonReturnType updateTitle(String title) throws Exception {
 
         if (title == null || "".equals(title)) {
@@ -43,7 +41,6 @@ public class  TestController extends BaseController
         vo.setTitle(title);
         return CommonReturnType.create(vo);
     }
-
 
 
 }

@@ -6,8 +6,8 @@
     <settings>
         <setting name="mapUnderscoreToCamelCase" value="true"/>
     </settings>
-<!--    <mappers>-->
-<!--       指定单个mapper -->
-<!--        <mapper resource="mapper/BookDaoMapper.xml"/>-->
-<!--    </mappers>-->
+    <!--    <mappers>-->
+    <!--       指定单个mapper -->
+    <!--        <mapper resource="mapper/BookDaoMapper.xml"/>-->
+    <!--    </mappers>-->
 </configuration>

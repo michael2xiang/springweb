@@ -4,13 +4,13 @@
     <select id="getAllBook" resultType="Book">
         select id,title,price,publishDate from books
     </select>
-    <update id="updateBook"  parameterType="com.imooc.web1.entity.Book" >
+    <update id="updateBook" parameterType="com.imooc.web1.entity.Book">
         update books
-            <set>
-                <if test="title!=null" > title=#{title},</if>
-                <if test="price!=0.0" > price=#{price},</if>
-                <if test="publishDate!=null" > publishDate=#{publishDate},</if>
-            </set>
+        <set>
+            <if test="title!=null">title=#{title},</if>
+            <if test="price!=0.0">price=#{price},</if>
+            <if test="publishDate!=null">publishDate=#{publishDate},</if>
+        </set>
         where id=#{id}
 
     </update>

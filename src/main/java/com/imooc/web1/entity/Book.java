@@ -53,14 +53,13 @@ public class Book {
         this.publishDate = publishDate;
     }
 
-    public  Book()
-    {
+    public Book() {
     }
-    public Book(int id, String title,double price, Date publishDate)
-    {
+
+    public Book(int id, String title, double price, Date publishDate) {
         this.id = id;
         this.title = title;
         this.price = price;
-        this.publishDate=publishDate;
+        this.publishDate = publishDate;
     }
 }

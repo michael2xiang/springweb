@@ -19,12 +19,11 @@ public class TaskTest {
     private TaskInstanceMapper taskInstanceMapper;
 
     @Test
-    public void GetListByRowBound()
-    {
+    public void GetListByRowBound() {
         //偏移量
         List<TaskInstance> taskInstanceList = taskInstanceMapper
-                .findAllWithRowBounds(new RowBounds(11,10));
-        Assert.assertTrue(taskInstanceList.size()==10);
+                .findAllWithRowBounds(new RowBounds(11, 10));
+        Assert.assertTrue(taskInstanceList.size() == 10);
 
 //        taskInstanceMapper.findAllWithRowBounds(new RowBounds(1,10))
 //                .forEach(q=>log.info
@@ -33,13 +32,12 @@ public class TaskTest {
     }
 
     @Test
-    public void GetListByParam()
-    {
+    public void GetListByParam() {
         //页数
-        List<TaskInstance> taskInstanceList =  taskInstanceMapper.
-                findAllWithParams(2,10);
-        Assert.assertTrue(taskInstanceList.size()==10);
-        Logger  log = Logger.getLogger("test");
+        List<TaskInstance> taskInstanceList = taskInstanceMapper.
+                findAllWithParams(2, 10);
+        Assert.assertTrue(taskInstanceList.size() == 10);
+        Logger log = Logger.getLogger("test");
 
     }
 

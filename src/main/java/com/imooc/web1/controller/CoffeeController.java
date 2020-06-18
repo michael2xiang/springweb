@@ -17,9 +17,8 @@ public class CoffeeController extends BaseController {
     private CoffeeDao coffeeDao;
 
     @GetMapping(value = "/getall")
-    public CommonReturnType getAll()
-    {
-        List<Coffee> coffeeList =  coffeeDao.getAll();
+    public CommonReturnType getAll() {
+        List<Coffee> coffeeList = coffeeDao.getAll();
         return CommonReturnType.create(coffeeList);
     }
 }

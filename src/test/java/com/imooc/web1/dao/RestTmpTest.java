@@ -17,8 +17,7 @@ public class RestTmpTest {
     private RestTemplate restTemplate;
 
     @Test
-    public void Get()
-    {
+    public void Get() {
         URI uri = UriComponentsBuilder
                 .fromUriString("http://baidu.com/s?wd={k}")
                 .build("a");

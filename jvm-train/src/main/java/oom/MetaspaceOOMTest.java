@@ -18,7 +18,7 @@ import java.util.Map;
 
 /**
  * 元空间内存溢出
- *
+ * <p>
  * -Xmx20m  -Xmn4m -XX:+UseG1GC  -verbose:gc -Xlog:gc,gc+ref=debug,gc+heap=debug,gc+age=trace:file=/gc_%p.log:tags,uptime,time,level -Xlog:safepoint:file=/safepoint_%p.log:tags,uptime,time,level -XX:+HeapDumpOnOutOfMemoryError -XX:HeapDumpPath=/ -XX:ErrorFile=/hs_error_pid%p.log -XX:-OmitStackTraceInFastThrow -XX:MetaspaceSize=16M -XX:MaxMetaspaceSize=16M
  */
 public class MetaspaceOOMTest {
@@ -75,8 +75,8 @@ public class MetaspaceOOMTest {
         }
     }
 
-    private static void  srv() throws IOException {
-        HttpServer server = HttpServer.create(new InetSocketAddress(8888),0);
+    private static void srv() throws IOException {
+        HttpServer server = HttpServer.create(new InetSocketAddress(8002), 0);
         HttpContext context = server.createContext("/");
         context.setHandler(MetaspaceOOMTest::oom);
         server.start();

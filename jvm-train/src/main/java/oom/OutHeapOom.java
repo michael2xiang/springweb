@@ -15,7 +15,9 @@ import java.util.zip.GZIPOutputStream;
 
 /**
  * 堆外内存泄漏demo，熟悉排查工具使用
- *
+ * <p>
+ * javac -encoding UTF-8  OutHeapOom.java
+ * <p>
  * 启动参数
  * java -Xmx1G -Xmn1G -XX:+AlwaysPreTouch  -XX:MaxMetaspaceSize=10M -XX:MaxDirectMemorySize=10M -XX:NativeMemoryTracking=detail LeakExample
  */
@@ -63,8 +65,7 @@ public class OutHeapOom {
         byte[] buffer = new byte[4096];
         long count = 0L;
         int n;
-        for (; -1 != (n = input.read(buffer)); count += (long) n)
-        {
+        for (; -1 != (n = input.read(buffer)); count += (long) n) {
             output.write(buffer, 0, n);
         }
         return count;
@@ -72,6 +73,7 @@ public class OutHeapOom {
 
     /**
      * 解压
+     *
      * @param inputBytes
      * @return
      * @throws IOException
@@ -87,6 +89,7 @@ public class OutHeapOom {
 
     /**
      * 获取内存使用占比
+     *
      * @return
      */
     private static int memoryLoad() {
@@ -100,6 +103,7 @@ public class OutHeapOom {
 
     /**
      * 压缩
+     *
      * @param str
      * @return
      * @throws IOException
@@ -120,6 +124,7 @@ public class OutHeapOom {
 
     /**
      * 生成随机字符串
+     *
      * @param strLength
      * @return
      */
@@ -130,10 +135,10 @@ public class OutHeapOom {
             boolean isChar = (rnd.nextInt(2) % 2 == 0);
             if (isChar) {
                 int choice = rnd.nextInt(2) % 2 == 0 ? 65 : 97;
-                sb.append("AAAAAA"+(choice + rnd.nextInt(26)));
+                sb.append("AAAAAA" + (choice + rnd.nextInt(26)));
 
             } else {
-                sb.append("BBBBBB"+rnd.nextInt(10));
+                sb.append("BBBBBB" + rnd.nextInt(10));
             }
         }
         return sb.toString();

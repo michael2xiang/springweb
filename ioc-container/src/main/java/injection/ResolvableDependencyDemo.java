@@ -24,7 +24,7 @@ public class ResolvableDependencyDemo {
         AnnotationConfigApplicationContext annotationConfigApplicationContext = new AnnotationConfigApplicationContext();
         annotationConfigApplicationContext.register(ResolvableDependencyDemo.class);
         //回调拓展方式：参数为函数接口（实现了制定接口的class实例），加到ArrayList容器中，在后面调用
-        CustomBeanFactoryPostProcessor customBeanFactoryPostProcessor  = new CustomBeanFactoryPostProcessor();
+        CustomBeanFactoryPostProcessor customBeanFactoryPostProcessor = new CustomBeanFactoryPostProcessor();
         annotationConfigApplicationContext.addBeanFactoryPostProcessor(customBeanFactoryPostProcessor);
 //      函数接口的写法二：lambda表达式，匿名类实例
 //        annotationConfigApplicationContext.addBeanFactoryPostProcessor(beanFactory -> {

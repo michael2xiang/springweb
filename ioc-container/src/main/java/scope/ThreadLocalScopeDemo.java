@@ -39,7 +39,7 @@ public class ThreadLocalScopeDemo {
                 User user = (User) applicationContext.getBean("user");
 //                System.out.println("thread id="+Thread.currentThread().getId()+",user hascode="+user.hashCode());
                 //format方法
-                System.out.printf("thread id=%s,user hascode=%s %n", Thread.currentThread().getId() , user.hashCode());
+                System.out.printf("thread id=%s,user hascode=%s %n", Thread.currentThread().getId(), user.hashCode());
             });
             thread.start();
 

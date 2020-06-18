@@ -20,19 +20,15 @@ public class ApplicationContextWithAnnotationAsIoc {
     }
 
     @Bean
-    public User user()
-    {
+    public User user() {
         User user = new User();
         user.setId(22L);
         user.setName("通过注解定义的bean");
-        return  user;
+        return user;
     }
 
 
-
-
-    private static void lookupBean(BeanFactory beanFactory)
-    {
+    private static void lookupBean(BeanFactory beanFactory) {
         //通过类型实时查找集合
         if (beanFactory instanceof ListableBeanFactory) {
             ListableBeanFactory listableBeanFactory = (ListableBeanFactory) beanFactory;

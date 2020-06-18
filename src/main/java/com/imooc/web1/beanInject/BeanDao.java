@@ -6,8 +6,7 @@ import org.springframework.stereotype.Repository;
 public class BeanDao {
 
 
-    public void say()
-    {
+    public void say() {
         System.out.println(" BeanService say");
     }
 }

@@ -10,14 +10,14 @@ public enum RateLimitResultEnum {
 
     private Long code;
 
-    RateLimitResultEnum(Long code){
+    RateLimitResultEnum(Long code) {
         this.code = code;
     }
 
 
-    public static RateLimitResultEnum getResult(Long code){
-        for(RateLimitResultEnum enums: RateLimitResultEnum.values()){
-            if(enums.code.equals(code)){
+    public static RateLimitResultEnum getResult(Long code) {
+        for (RateLimitResultEnum enums : RateLimitResultEnum.values()) {
+            if (enums.code.equals(code)) {
                 return enums;
             }
         }

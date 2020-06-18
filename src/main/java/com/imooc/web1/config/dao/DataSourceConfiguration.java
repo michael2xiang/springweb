@@ -7,6 +7,7 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
 import java.beans.PropertyVetoException;
+
 @Configuration
 @MapperScan("com.imooc.web1.dao")
 public class DataSourceConfiguration {
@@ -19,7 +20,7 @@ public class DataSourceConfiguration {
     @Value("${jdbc.psw}")
     private String jdbcPsw;
 
-    @Bean(name="myDataSource")
+    @Bean(name = "myDataSource")
     public ComboPooledDataSource createDataSource() throws PropertyVetoException {
         ComboPooledDataSource dataSource = new ComboPooledDataSource();
         dataSource.setDriverClass(jdbcDriver);

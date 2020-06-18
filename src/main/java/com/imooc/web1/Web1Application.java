@@ -13,7 +13,8 @@ import org.springframework.web.client.RestTemplate;
 //@ImportResource(locations = "classpath*:mapper/**.xml")
 public class Web1Application {
 
-    private static  final Logger logger = LoggerFactory.getLogger(Web1Application.class);
+    private static final Logger logger = LoggerFactory.getLogger(Web1Application.class);
+
     public static void main(String[] args) {
         SpringApplication.run(Web1Application.class, args);
 
@@ -21,8 +22,7 @@ public class Web1Application {
     }
 
     @Bean
-    public RestTemplate restTemplate(RestTemplateBuilder builder)
-    {
+    public RestTemplate restTemplate(RestTemplateBuilder builder) {
         return builder.build();
     }
 

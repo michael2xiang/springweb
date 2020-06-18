@@ -6,7 +6,7 @@ import org.springframework.context.annotation.AnnotationConfigApplicationContext
 import org.springframework.context.annotation.Bean;
 
 /**
- *调试@Autowired的实现源码
+ * 调试@Autowired的实现源码
  */
 public class AutowiredDemo {
     public static void main(String[] args) {
@@ -26,11 +26,10 @@ public class AutowiredDemo {
     private User user;
 
     @Bean
-    public User user()
-    {
+    public User user() {
         User user = new User();
         user.setId(11L);
         user.setName("通过注解定义的bean11111");
-        return  user;
+        return user;
     }
 }

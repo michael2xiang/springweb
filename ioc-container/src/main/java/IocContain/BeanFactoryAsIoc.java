@@ -12,6 +12,6 @@ public class BeanFactoryAsIoc {
         DefaultListableBeanFactory beanFactory = new DefaultListableBeanFactory();
         XmlBeanDefinitionReader xmlBeanDefinitionReader = new XmlBeanDefinitionReader(beanFactory);
         int beanCount = xmlBeanDefinitionReader.loadBeanDefinitions("classpath:/bean.xml");
-        System.out.println("bean总数量："+beanCount);
+        System.out.println("bean总数量：" + beanCount);
     }
 }

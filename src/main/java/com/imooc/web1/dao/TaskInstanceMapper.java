@@ -2,7 +2,9 @@ package com.imooc.web1.dao;
 
 import com.imooc.web1.entity.TaskInstance;
 import com.imooc.web1.entity.TaskInstanceExample;
+
 import java.util.List;
+
 import org.apache.ibatis.annotations.Param;
 import org.apache.ibatis.annotations.Select;
 import org.apache.ibatis.session.RowBounds;
@@ -28,8 +30,7 @@ public interface TaskInstanceMapper {
 
     @Select("select * from task_instance order by task_id")
     List<TaskInstance> findAllWithParams(@Param("pageNum") int pageNum,
-                                        @Param("pageSize") int pageSize);
-
+                                         @Param("pageSize") int pageSize);
 
 
 }

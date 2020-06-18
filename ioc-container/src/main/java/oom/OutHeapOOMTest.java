@@ -9,18 +9,18 @@ import java.io.OutputStream;
 import java.lang.management.ManagementFactory;
 import java.lang.management.MemoryPoolMXBean;
 import java.net.InetSocketAddress;
+import java.nio.ByteBuffer;
 import java.util.ArrayList;
 import java.util.List;
 
 /**
- * 堆内存溢出
- * jdk13 jvm 参数配置
- * -Xmx20m  -Xmn4m  -XX:+UseConcMarkSweepGC  -verbose:gc -Xlog:gc,gc+ref=debug,gc+heap=debug,gc+age=trace:file=/gc_%p.log:tags,uptime,time,level -Xlog:safepoint:file=/safepoint_%p.log:tags,uptime,time,level -XX:+HeapDumpOnOutOfMemoryError -XX:HeapDumpPath=/ -XX:ErrorFile=/hs_error_pid%p.log -XX:-OmitStackTraceInFastThrow
- * -Xmx30m  -Xmn4m -XX:+UseG1GC -XX:G1HeapRegionSize=1024  -verbose:gc -Xlog:gc,gc+ref=debug,gc+heap=debug,gc+age=trace:file=/gc_%p.log:tags,uptime,time,level -Xlog:safepoint:file=/safepoint_%p.log:tags,uptime,time,level -XX:+HeapDumpOnOutOfMemoryError -XX:HeapDumpPath=/ -XX:ErrorFile=/hs_error_pid%p.log -XX:-OmitStackTraceInFastThrow
+ * 堆外内存溢出
+ * -Xmx30m  -Xmn4m -XX:MaxDirectMemorySize=50M  -XX:+UseG1GC -XX:G1HeapRegionSize=1024  -verbose:gc -Xlog:gc,gc+ref=debug,gc+heap=debug,gc+age=trace:file=/gc_%p.log:tags,uptime,time,level -Xlog:safepoint:file=/safepoint_%p.log:tags,uptime,time,level -XX:+HeapDumpOnOutOfMemoryError -XX:HeapDumpPath=/ -XX:ErrorFile=/hs_error_pid%p.log -XX:-OmitStackTraceInFastThrow
  */
-public class HeapoomTest {
+public class OutHeapOOMTest {
+
     public static final int _1MB = 1024 * 1024;
-    static List<byte[]> byteList = new ArrayList<>();
+    static List<ByteBuffer> byteList = new ArrayList<>();
 
     private static void oom(HttpExchange exchange) throws InterruptedException {
         try {
@@ -35,8 +35,8 @@ public class HeapoomTest {
         }
 
         for (int i = 0; ; i++) {
-            byte[] bytes = new byte[_1MB];
-            byteList.add(bytes);
+            ByteBuffer buffer = ByteBuffer.allocateDirect(_1MB);
+            byteList.add(buffer);
             System.out.printf(i + "MB");
             memPrint();
             try {
@@ -58,7 +58,7 @@ public class HeapoomTest {
     }
 
     private static void srv() throws Exception {
-        HttpServer server = HttpServer.create(new InetSocketAddress(8001), 0);
+        HttpServer server = HttpServer.create(new InetSocketAddress(8003), 0);
         HttpContext context = server.createContext("/");
         context.setHandler(exchange -> {
             try {
@@ -73,5 +73,4 @@ public class HeapoomTest {
     public static void main(String[] args) throws Exception {
         srv();
     }
-
 }

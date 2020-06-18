@@ -19,17 +19,16 @@ public class BookDaoTest {
     private BookDao bookDao;
     @Autowired
     private TaskInstanceMapper taskInstanceMapper;
+
     @Test
-    public  void GetBook()
-    {
+    public void GetBook() {
         List<Book> books = bookDao.getAllBook();
-        int  size = books.size();
-        assertEquals(6,size);
+        int size = books.size();
+        assertEquals(6, size);
     }
 
     @Test
-    public  void UpdateBook()
-    {
+    public void UpdateBook() {
         Book book = new Book();
         book.setId(1);
         book.setTitle("test");
@@ -40,20 +39,19 @@ public class BookDaoTest {
 
 //        boolean a = after.getPrice() == 100;
 //        assertEquals(a,true);
-        assertEquals( after.getTitle(),"test");
+        assertEquals(after.getTitle(), "test");
 
 
     }
 
     @Test
-    public  void GetTask()
-    {
-        TaskInstanceExample taskInstanceExample =new TaskInstanceExample();
+    public void GetTask() {
+        TaskInstanceExample taskInstanceExample = new TaskInstanceExample();
         TaskInstanceExample.Criteria criteria = taskInstanceExample.createCriteria();
         criteria.andEndDateIsNotNull().andDagIdIsNotNull();
         taskInstanceExample.setOrderByClause("task_id desc");
         long count = taskInstanceMapper.countByExample(taskInstanceExample);
-        assertTrue(count>0);
+        assertTrue(count > 0);
 
     }
 

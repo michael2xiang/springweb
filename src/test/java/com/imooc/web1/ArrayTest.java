@@ -11,13 +11,12 @@ import java.util.ArrayList;
 @SpringBootTest
 public class ArrayTest {
     @Test
-    public  void ArrayMoveIf()
-    {
+    public void ArrayMoveIf() {
         ArrayList<String> arra = new ArrayList<String>();
         arra.add("a");
         arra.add("b");
         arra.add(null);
-        arra.removeIf(e->e==null);
+        arra.removeIf(e -> e == null);
         System.out.println(arra.toString());
 
     }

@@ -1,107 +1,109 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.imooc.web1.dao.TaskInstanceMapper">
-  <resultMap id="BaseResultMap" type="com.imooc.web1.entity.TaskInstance">
-    <result column="task_id" jdbcType="VARCHAR" property="taskId" />
-    <result column="dag_id" jdbcType="VARCHAR" property="dagId" />
-    <result column="execution_date" jdbcType="TIMESTAMP" property="executionDate" />
-    <result column="start_date" jdbcType="TIMESTAMP" property="startDate" />
-    <result column="end_date" jdbcType="TIMESTAMP" property="endDate" />
-    <result column="duration" jdbcType="REAL" property="duration" />
-    <result column="state" jdbcType="VARCHAR" property="state" />
-    <result column="try_number" jdbcType="INTEGER" property="tryNumber" />
-    <result column="hostname" jdbcType="VARCHAR" property="hostname" />
-    <result column="unixname" jdbcType="VARCHAR" property="unixname" />
-    <result column="job_id" jdbcType="INTEGER" property="jobId" />
-    <result column="pool" jdbcType="VARCHAR" property="pool" />
-    <result column="queue" jdbcType="VARCHAR" property="queue" />
-    <result column="priority_weight" jdbcType="INTEGER" property="priorityWeight" />
-    <result column="operator" jdbcType="VARCHAR" property="operator" />
-    <result column="queued_dttm" jdbcType="TIMESTAMP" property="queuedDttm" />
-  </resultMap>
-  <sql id="Example_Where_Clause">
-    <where>
-      <foreach collection="oredCriteria" item="criteria" separator="or">
-        <if test="criteria.valid">
-          <trim prefix="(" prefixOverrides="and" suffix=")">
-            <foreach collection="criteria.criteria" item="criterion">
-              <choose>
-                <when test="criterion.noValue">
-                  and ${criterion.condition}
-                </when>
-                <when test="criterion.singleValue">
-                  and ${criterion.condition} #{criterion.value}
-                </when>
-                <when test="criterion.betweenValue">
-                  and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
-                </when>
-                <when test="criterion.listValue">
-                  and ${criterion.condition}
-                  <foreach close=")" collection="criterion.value" item="listItem" open="(" separator=",">
-                    #{listItem}
-                  </foreach>
-                </when>
-              </choose>
+    <resultMap id="BaseResultMap" type="com.imooc.web1.entity.TaskInstance">
+        <result column="task_id" jdbcType="VARCHAR" property="taskId"/>
+        <result column="dag_id" jdbcType="VARCHAR" property="dagId"/>
+        <result column="execution_date" jdbcType="TIMESTAMP" property="executionDate"/>
+        <result column="start_date" jdbcType="TIMESTAMP" property="startDate"/>
+        <result column="end_date" jdbcType="TIMESTAMP" property="endDate"/>
+        <result column="duration" jdbcType="REAL" property="duration"/>
+        <result column="state" jdbcType="VARCHAR" property="state"/>
+        <result column="try_number" jdbcType="INTEGER" property="tryNumber"/>
+        <result column="hostname" jdbcType="VARCHAR" property="hostname"/>
+        <result column="unixname" jdbcType="VARCHAR" property="unixname"/>
+        <result column="job_id" jdbcType="INTEGER" property="jobId"/>
+        <result column="pool" jdbcType="VARCHAR" property="pool"/>
+        <result column="queue" jdbcType="VARCHAR" property="queue"/>
+        <result column="priority_weight" jdbcType="INTEGER" property="priorityWeight"/>
+        <result column="operator" jdbcType="VARCHAR" property="operator"/>
+        <result column="queued_dttm" jdbcType="TIMESTAMP" property="queuedDttm"/>
+    </resultMap>
+    <sql id="Example_Where_Clause">
+        <where>
+            <foreach collection="oredCriteria" item="criteria" separator="or">
+                <if test="criteria.valid">
+                    <trim prefix="(" prefixOverrides="and" suffix=")">
+                        <foreach collection="criteria.criteria" item="criterion">
+                            <choose>
+                                <when test="criterion.noValue">
+                                    and ${criterion.condition}
+                                </when>
+                                <when test="criterion.singleValue">
+                                    and ${criterion.condition} #{criterion.value}
+                                </when>
+                                <when test="criterion.betweenValue">
+                                    and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
+                                </when>
+                                <when test="criterion.listValue">
+                                    and ${criterion.condition}
+                                    <foreach close=")" collection="criterion.value" item="listItem" open="("
+                                             separator=",">
+                                        #{listItem}
+                                    </foreach>
+                                </when>
+                            </choose>
+                        </foreach>
+                    </trim>
+                </if>
             </foreach>
-          </trim>
-        </if>
-      </foreach>
-    </where>
-  </sql>
-  <sql id="Update_By_Example_Where_Clause">
-    <where>
-      <foreach collection="example.oredCriteria" item="criteria" separator="or">
-        <if test="criteria.valid">
-          <trim prefix="(" prefixOverrides="and" suffix=")">
-            <foreach collection="criteria.criteria" item="criterion">
-              <choose>
-                <when test="criterion.noValue">
-                  and ${criterion.condition}
-                </when>
-                <when test="criterion.singleValue">
-                  and ${criterion.condition} #{criterion.value}
-                </when>
-                <when test="criterion.betweenValue">
-                  and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
-                </when>
-                <when test="criterion.listValue">
-                  and ${criterion.condition}
-                  <foreach close=")" collection="criterion.value" item="listItem" open="(" separator=",">
-                    #{listItem}
-                  </foreach>
-                </when>
-              </choose>
+        </where>
+    </sql>
+    <sql id="Update_By_Example_Where_Clause">
+        <where>
+            <foreach collection="example.oredCriteria" item="criteria" separator="or">
+                <if test="criteria.valid">
+                    <trim prefix="(" prefixOverrides="and" suffix=")">
+                        <foreach collection="criteria.criteria" item="criterion">
+                            <choose>
+                                <when test="criterion.noValue">
+                                    and ${criterion.condition}
+                                </when>
+                                <when test="criterion.singleValue">
+                                    and ${criterion.condition} #{criterion.value}
+                                </when>
+                                <when test="criterion.betweenValue">
+                                    and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
+                                </when>
+                                <when test="criterion.listValue">
+                                    and ${criterion.condition}
+                                    <foreach close=")" collection="criterion.value" item="listItem" open="("
+                                             separator=",">
+                                        #{listItem}
+                                    </foreach>
+                                </when>
+                            </choose>
+                        </foreach>
+                    </trim>
+                </if>
             </foreach>
-          </trim>
-        </if>
-      </foreach>
-    </where>
-  </sql>
-  <sql id="Base_Column_List">
+        </where>
+    </sql>
+    <sql id="Base_Column_List">
     task_id, dag_id, execution_date, start_date, end_date, duration, state, try_number, 
     hostname, unixname, job_id, pool, queue, priority_weight, operator, queued_dttm
   </sql>
-  <select id="selectByExample" parameterType="com.imooc.web1.entity.TaskInstanceExample" resultMap="BaseResultMap">
-    select
-    <if test="distinct">
-      distinct
-    </if>
-    <include refid="Base_Column_List" />
-    from task_instance
-    <if test="_parameter != null">
-      <include refid="Example_Where_Clause" />
-    </if>
-    <if test="orderByClause != null">
-      order by ${orderByClause}
-    </if>
-  </select>
-  <delete id="deleteByExample" parameterType="com.imooc.web1.entity.TaskInstanceExample">
-    delete from task_instance
-    <if test="_parameter != null">
-      <include refid="Example_Where_Clause" />
-    </if>
-  </delete>
-  <insert id="insert" parameterType="com.imooc.web1.entity.TaskInstance">
+    <select id="selectByExample" parameterType="com.imooc.web1.entity.TaskInstanceExample" resultMap="BaseResultMap">
+        select
+        <if test="distinct">
+            distinct
+        </if>
+        <include refid="Base_Column_List"/>
+        from task_instance
+        <if test="_parameter != null">
+            <include refid="Example_Where_Clause"/>
+        </if>
+        <if test="orderByClause != null">
+            order by ${orderByClause}
+        </if>
+    </select>
+    <delete id="deleteByExample" parameterType="com.imooc.web1.entity.TaskInstanceExample">
+        delete from task_instance
+        <if test="_parameter != null">
+            <include refid="Example_Where_Clause"/>
+        </if>
+    </delete>
+    <insert id="insert" parameterType="com.imooc.web1.entity.TaskInstance">
     insert into task_instance (task_id, dag_id, execution_date, 
       start_date, end_date, duration, 
       state, try_number, hostname, 
@@ -115,192 +117,192 @@
       #{queue,jdbcType=VARCHAR}, #{priorityWeight,jdbcType=INTEGER}, #{operator,jdbcType=VARCHAR}, 
       #{queuedDttm,jdbcType=TIMESTAMP})
   </insert>
-  <insert id="insertSelective" parameterType="com.imooc.web1.entity.TaskInstance">
-    insert into task_instance
-    <trim prefix="(" suffix=")" suffixOverrides=",">
-      <if test="taskId != null">
-        task_id,
-      </if>
-      <if test="dagId != null">
-        dag_id,
-      </if>
-      <if test="executionDate != null">
-        execution_date,
-      </if>
-      <if test="startDate != null">
-        start_date,
-      </if>
-      <if test="endDate != null">
-        end_date,
-      </if>
-      <if test="duration != null">
-        duration,
-      </if>
-      <if test="state != null">
-        state,
-      </if>
-      <if test="tryNumber != null">
-        try_number,
-      </if>
-      <if test="hostname != null">
-        hostname,
-      </if>
-      <if test="unixname != null">
-        unixname,
-      </if>
-      <if test="jobId != null">
-        job_id,
-      </if>
-      <if test="pool != null">
-        pool,
-      </if>
-      <if test="queue != null">
-        queue,
-      </if>
-      <if test="priorityWeight != null">
-        priority_weight,
-      </if>
-      <if test="operator != null">
-        operator,
-      </if>
-      <if test="queuedDttm != null">
-        queued_dttm,
-      </if>
-    </trim>
-    <trim prefix="values (" suffix=")" suffixOverrides=",">
-      <if test="taskId != null">
-        #{taskId,jdbcType=VARCHAR},
-      </if>
-      <if test="dagId != null">
-        #{dagId,jdbcType=VARCHAR},
-      </if>
-      <if test="executionDate != null">
-        #{executionDate,jdbcType=TIMESTAMP},
-      </if>
-      <if test="startDate != null">
-        #{startDate,jdbcType=TIMESTAMP},
-      </if>
-      <if test="endDate != null">
-        #{endDate,jdbcType=TIMESTAMP},
-      </if>
-      <if test="duration != null">
-        #{duration,jdbcType=REAL},
-      </if>
-      <if test="state != null">
-        #{state,jdbcType=VARCHAR},
-      </if>
-      <if test="tryNumber != null">
-        #{tryNumber,jdbcType=INTEGER},
-      </if>
-      <if test="hostname != null">
-        #{hostname,jdbcType=VARCHAR},
-      </if>
-      <if test="unixname != null">
-        #{unixname,jdbcType=VARCHAR},
-      </if>
-      <if test="jobId != null">
-        #{jobId,jdbcType=INTEGER},
-      </if>
-      <if test="pool != null">
-        #{pool,jdbcType=VARCHAR},
-      </if>
-      <if test="queue != null">
-        #{queue,jdbcType=VARCHAR},
-      </if>
-      <if test="priorityWeight != null">
-        #{priorityWeight,jdbcType=INTEGER},
-      </if>
-      <if test="operator != null">
-        #{operator,jdbcType=VARCHAR},
-      </if>
-      <if test="queuedDttm != null">
-        #{queuedDttm,jdbcType=TIMESTAMP},
-      </if>
-    </trim>
-  </insert>
-  <select id="countByExample" parameterType="com.imooc.web1.entity.TaskInstanceExample" resultType="java.lang.Long">
-    select count(*) from task_instance
-    <if test="_parameter != null">
-      <include refid="Example_Where_Clause" />
-    </if>
-  </select>
-  <update id="updateByExampleSelective" parameterType="map">
-    update task_instance
-    <set>
-      <if test="record.taskId != null">
-        task_id = #{record.taskId,jdbcType=VARCHAR},
-      </if>
-      <if test="record.dagId != null">
+    <insert id="insertSelective" parameterType="com.imooc.web1.entity.TaskInstance">
+        insert into task_instance
+        <trim prefix="(" suffix=")" suffixOverrides=",">
+            <if test="taskId != null">
+                task_id,
+            </if>
+            <if test="dagId != null">
+                dag_id,
+            </if>
+            <if test="executionDate != null">
+                execution_date,
+            </if>
+            <if test="startDate != null">
+                start_date,
+            </if>
+            <if test="endDate != null">
+                end_date,
+            </if>
+            <if test="duration != null">
+                duration,
+            </if>
+            <if test="state != null">
+                state,
+            </if>
+            <if test="tryNumber != null">
+                try_number,
+            </if>
+            <if test="hostname != null">
+                hostname,
+            </if>
+            <if test="unixname != null">
+                unixname,
+            </if>
+            <if test="jobId != null">
+                job_id,
+            </if>
+            <if test="pool != null">
+                pool,
+            </if>
+            <if test="queue != null">
+                queue,
+            </if>
+            <if test="priorityWeight != null">
+                priority_weight,
+            </if>
+            <if test="operator != null">
+                operator,
+            </if>
+            <if test="queuedDttm != null">
+                queued_dttm,
+            </if>
+        </trim>
+        <trim prefix="values (" suffix=")" suffixOverrides=",">
+            <if test="taskId != null">
+                #{taskId,jdbcType=VARCHAR},
+            </if>
+            <if test="dagId != null">
+                #{dagId,jdbcType=VARCHAR},
+            </if>
+            <if test="executionDate != null">
+                #{executionDate,jdbcType=TIMESTAMP},
+            </if>
+            <if test="startDate != null">
+                #{startDate,jdbcType=TIMESTAMP},
+            </if>
+            <if test="endDate != null">
+                #{endDate,jdbcType=TIMESTAMP},
+            </if>
+            <if test="duration != null">
+                #{duration,jdbcType=REAL},
+            </if>
+            <if test="state != null">
+                #{state,jdbcType=VARCHAR},
+            </if>
+            <if test="tryNumber != null">
+                #{tryNumber,jdbcType=INTEGER},
+            </if>
+            <if test="hostname != null">
+                #{hostname,jdbcType=VARCHAR},
+            </if>
+            <if test="unixname != null">
+                #{unixname,jdbcType=VARCHAR},
+            </if>
+            <if test="jobId != null">
+                #{jobId,jdbcType=INTEGER},
+            </if>
+            <if test="pool != null">
+                #{pool,jdbcType=VARCHAR},
+            </if>
+            <if test="queue != null">
+                #{queue,jdbcType=VARCHAR},
+            </if>
+            <if test="priorityWeight != null">
+                #{priorityWeight,jdbcType=INTEGER},
+            </if>
+            <if test="operator != null">
+                #{operator,jdbcType=VARCHAR},
+            </if>
+            <if test="queuedDttm != null">
+                #{queuedDttm,jdbcType=TIMESTAMP},
+            </if>
+        </trim>
+    </insert>
+    <select id="countByExample" parameterType="com.imooc.web1.entity.TaskInstanceExample" resultType="java.lang.Long">
+        select count(*) from task_instance
+        <if test="_parameter != null">
+            <include refid="Example_Where_Clause"/>
+        </if>
+    </select>
+    <update id="updateByExampleSelective" parameterType="map">
+        update task_instance
+        <set>
+            <if test="record.taskId != null">
+                task_id = #{record.taskId,jdbcType=VARCHAR},
+            </if>
+            <if test="record.dagId != null">
+                dag_id = #{record.dagId,jdbcType=VARCHAR},
+            </if>
+            <if test="record.executionDate != null">
+                execution_date = #{record.executionDate,jdbcType=TIMESTAMP},
+            </if>
+            <if test="record.startDate != null">
+                start_date = #{record.startDate,jdbcType=TIMESTAMP},
+            </if>
+            <if test="record.endDate != null">
+                end_date = #{record.endDate,jdbcType=TIMESTAMP},
+            </if>
+            <if test="record.duration != null">
+                duration = #{record.duration,jdbcType=REAL},
+            </if>
+            <if test="record.state != null">
+                state = #{record.state,jdbcType=VARCHAR},
+            </if>
+            <if test="record.tryNumber != null">
+                try_number = #{record.tryNumber,jdbcType=INTEGER},
+            </if>
+            <if test="record.hostname != null">
+                hostname = #{record.hostname,jdbcType=VARCHAR},
+            </if>
+            <if test="record.unixname != null">
+                unixname = #{record.unixname,jdbcType=VARCHAR},
+            </if>
+            <if test="record.jobId != null">
+                job_id = #{record.jobId,jdbcType=INTEGER},
+            </if>
+            <if test="record.pool != null">
+                pool = #{record.pool,jdbcType=VARCHAR},
+            </if>
+            <if test="record.queue != null">
+                queue = #{record.queue,jdbcType=VARCHAR},
+            </if>
+            <if test="record.priorityWeight != null">
+                priority_weight = #{record.priorityWeight,jdbcType=INTEGER},
+            </if>
+            <if test="record.operator != null">
+                operator = #{record.operator,jdbcType=VARCHAR},
+            </if>
+            <if test="record.queuedDttm != null">
+                queued_dttm = #{record.queuedDttm,jdbcType=TIMESTAMP},
+            </if>
+        </set>
+        <if test="_parameter != null">
+            <include refid="Update_By_Example_Where_Clause"/>
+        </if>
+    </update>
+    <update id="updateByExample" parameterType="map">
+        update task_instance
+        set task_id = #{record.taskId,jdbcType=VARCHAR},
         dag_id = #{record.dagId,jdbcType=VARCHAR},
-      </if>
-      <if test="record.executionDate != null">
         execution_date = #{record.executionDate,jdbcType=TIMESTAMP},
-      </if>
-      <if test="record.startDate != null">
         start_date = #{record.startDate,jdbcType=TIMESTAMP},
-      </if>
-      <if test="record.endDate != null">
         end_date = #{record.endDate,jdbcType=TIMESTAMP},
-      </if>
-      <if test="record.duration != null">
         duration = #{record.duration,jdbcType=REAL},
-      </if>
-      <if test="record.state != null">
         state = #{record.state,jdbcType=VARCHAR},
-      </if>
-      <if test="record.tryNumber != null">
         try_number = #{record.tryNumber,jdbcType=INTEGER},
-      </if>
-      <if test="record.hostname != null">
         hostname = #{record.hostname,jdbcType=VARCHAR},
-      </if>
-      <if test="record.unixname != null">
         unixname = #{record.unixname,jdbcType=VARCHAR},
-      </if>
-      <if test="record.jobId != null">
         job_id = #{record.jobId,jdbcType=INTEGER},
-      </if>
-      <if test="record.pool != null">
         pool = #{record.pool,jdbcType=VARCHAR},
-      </if>
-      <if test="record.queue != null">
         queue = #{record.queue,jdbcType=VARCHAR},
-      </if>
-      <if test="record.priorityWeight != null">
         priority_weight = #{record.priorityWeight,jdbcType=INTEGER},
-      </if>
-      <if test="record.operator != null">
         operator = #{record.operator,jdbcType=VARCHAR},
-      </if>
-      <if test="record.queuedDttm != null">
-        queued_dttm = #{record.queuedDttm,jdbcType=TIMESTAMP},
-      </if>
-    </set>
-    <if test="_parameter != null">
-      <include refid="Update_By_Example_Where_Clause" />
-    </if>
-  </update>
-  <update id="updateByExample" parameterType="map">
-    update task_instance
-    set task_id = #{record.taskId,jdbcType=VARCHAR},
-      dag_id = #{record.dagId,jdbcType=VARCHAR},
-      execution_date = #{record.executionDate,jdbcType=TIMESTAMP},
-      start_date = #{record.startDate,jdbcType=TIMESTAMP},
-      end_date = #{record.endDate,jdbcType=TIMESTAMP},
-      duration = #{record.duration,jdbcType=REAL},
-      state = #{record.state,jdbcType=VARCHAR},
-      try_number = #{record.tryNumber,jdbcType=INTEGER},
-      hostname = #{record.hostname,jdbcType=VARCHAR},
-      unixname = #{record.unixname,jdbcType=VARCHAR},
-      job_id = #{record.jobId,jdbcType=INTEGER},
-      pool = #{record.pool,jdbcType=VARCHAR},
-      queue = #{record.queue,jdbcType=VARCHAR},
-      priority_weight = #{record.priorityWeight,jdbcType=INTEGER},
-      operator = #{record.operator,jdbcType=VARCHAR},
-      queued_dttm = #{record.queuedDttm,jdbcType=TIMESTAMP}
-    <if test="_parameter != null">
-      <include refid="Update_By_Example_Where_Clause" />
-    </if>
-  </update>
+        queued_dttm = #{record.queuedDttm,jdbcType=TIMESTAMP}
+        <if test="_parameter != null">
+            <include refid="Update_By_Example_Where_Clause"/>
+        </if>
+    </update>
 
 </mapper>

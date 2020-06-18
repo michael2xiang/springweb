@@ -4,12 +4,12 @@
     <select id="getAll" resultType="com.imooc.web1.entity.Coffee">
         select name, price, create_time, update_time from t_coffee
     </select>
-    <update id="update"  parameterType="com.imooc.web1.entity.Coffee" >
+    <update id="update" parameterType="com.imooc.web1.entity.Coffee">
         update t_coffee
         <set>
-            <if test="name!=null" > name=#{name},</if>
-            <if test="price!=0.0" > price=#{price},</if>
-            <if test="update_time!=null" > update_time=#{update_time},</if>
+            <if test="name!=null">name=#{name},</if>
+            <if test="price!=0.0">price=#{price},</if>
+            <if test="update_time!=null">update_time=#{update_time},</if>
         </set>
         where id=#{id}
 

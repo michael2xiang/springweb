@@ -10,8 +10,7 @@ public class DeadLockDemo {
     private static Lock lockA = new ReentrantLock();
     private static Lock lockB = new ReentrantLock();
 
-    public static void run()
-    {
+    public static void run() {
         Thread tA = new Thread(() -> {
             try {
                 lockA.lock();
@@ -23,7 +22,7 @@ public class DeadLockDemo {
 
         });
 
-        Thread tB = new Thread(()->{
+        Thread tB = new Thread(() -> {
             try {
                 lockB.lock();
                 Thread.sleep(1000);

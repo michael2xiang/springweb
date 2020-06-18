@@ -13,17 +13,16 @@ public class AgentTransformer implements ClassFileTransformer {
     public byte[] transform(ClassLoader loader, String className,
                             Class<?> classBeingRedefined, ProtectionDomain protectionDomain,
                             byte[] classfileBuffer) throws IllegalClassFormatException {
-        if(className.endsWith("MainRunDemo"))
-        {
+        if (className.endsWith("MainRunDemo")) {
             try {
-                String loadName = className.replaceAll("/",",");
+                String loadName = className.replaceAll("/", ",");
                 CtClass ctClass = ClassPool.getDefault().get(loadName);
                 CtMethod ctMethod = ctClass.getDeclaredMethod("abc");
-                ctMethod.addLocalVariable("_startTime",CtClass.longType);
+                ctMethod.addLocalVariable("_startTime", CtClass.longType);
                 ctMethod.insertBefore("_startTime = System.nanoTime();");
                 ctMethod.insertAfter("System.out.println(System.nanoTime() - _startTime);");
                 System.out.println(className);
-                return  ctClass.toBytecode();
+                return ctClass.toBytecode();
             } catch (Exception e) {
                 e.printStackTrace();
             }

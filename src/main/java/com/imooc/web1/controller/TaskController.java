@@ -14,11 +14,10 @@ public class TaskController {
     @Autowired
     private TaskInstanceMapper taskInstanceMapper;
 
-    @RequestMapping(value = "/list",method = RequestMethod.GET)
+    @RequestMapping(value = "/list", method = RequestMethod.GET)
     @ResponseBody
-    public List<TaskInstance> GetTaskList(@RequestParam(name="page") Integer page, @RequestParam(name = "size") Integer size )
-    {
-        return taskInstanceMapper.findAllWithParams(page,size);
+    public List<TaskInstance> GetTaskList(@RequestParam(name = "page") Integer page, @RequestParam(name = "size") Integer size) {
+        return taskInstanceMapper.findAllWithParams(page, size);
 
     }
 }

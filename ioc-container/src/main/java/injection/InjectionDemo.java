@@ -30,9 +30,9 @@ public class InjectionDemo {
 
         ObjectFactory<User> objectFactory = userRepository.getUserObjectFactory();
         User user = objectFactory.getObject();
-        System.out.println("延迟注入："+user);
+        System.out.println("延迟注入：" + user);
 
         Environment environment = applicationContextCreate.getBean(Environment.class);
-        System.out.println("内建bean："+environment);
+        System.out.println("内建bean：" + environment);
     }
 }
