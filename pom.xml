@@ -6,6 +6,7 @@
     <modules>
         <module>ioc-container</module>
         <module>jvm-train</module>
+        <module>designpattern</module>
     </modules>
     <parent>
         <groupId>org.springframework.boot</groupId>
