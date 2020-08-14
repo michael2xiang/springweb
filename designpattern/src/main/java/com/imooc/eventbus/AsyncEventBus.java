@@ -1,4 +1,4 @@
-package com.imooc.EventBus;
+package com.imooc.eventbus;
 
 import java.util.concurrent.Executor;
 

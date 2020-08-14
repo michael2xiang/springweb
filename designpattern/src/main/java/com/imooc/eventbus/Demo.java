@@ -1,4 +1,4 @@
-package com.imooc.EventBus;
+package com.imooc.eventbus;
 
 public class Demo {
     public static void main(String[] args) {

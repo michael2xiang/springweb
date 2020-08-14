@@ -1,8 +1,7 @@
-package com.imooc.EventBus;
+package com.imooc.eventbus;
 
 import org.assertj.core.util.Preconditions;
 
-import java.io.PipedReader;
 import java.lang.reflect.Method;
 import java.util.*;
 import java.util.concurrent.ConcurrentHashMap;

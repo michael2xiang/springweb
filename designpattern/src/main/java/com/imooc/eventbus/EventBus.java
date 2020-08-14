@@ -1,4 +1,4 @@
-package com.imooc.EventBus;
+package com.imooc.eventbus;
 
 import com.google.common.util.concurrent.MoreExecutors;
 

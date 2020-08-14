@@ -1,4 +1,4 @@
-package com.imooc.EventBus;
+package com.imooc.eventbus;
 
 import org.assertj.core.util.Preconditions;
 
