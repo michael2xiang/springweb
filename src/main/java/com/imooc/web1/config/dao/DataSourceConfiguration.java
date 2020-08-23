@@ -11,13 +11,13 @@ import java.beans.PropertyVetoException;
 @Configuration
 @MapperScan("com.imooc.web1.dao")
 public class DataSourceConfiguration {
-    @Value("${jdbc.driver}")
+    @Value("${jdbc.driver:org.h2.Driver}")
     private String jdbcDriver;
-    @Value("${jdbc.url}")
+    @Value("${jdbc.url:jdbc:h2:F:/06_code_train/web1/db}")
     private String jdbcUrl;
-    @Value("${jdbc.user}")
+    @Value("${jdbc.user:root}")
     private String jdbcUser;
-    @Value("${jdbc.psw}")
+    @Value("${jdbc.psw:root}")
     private String jdbcPsw;
 
     @Bean(name = "myDataSource")
