@@ -13,8 +13,8 @@ public class ModifyMethod {
         cp.insertClassPath("./log/out");
         final CtClass ctClass = cp.get("Hello2");
         final CtMethod foo = ctClass.getMethod("foo", "(II)I");
-        foo.insertBefore("System.out.println(\"var1=\" + $1 );");
-        foo.insertAfter("System.out.println(\"result=\" + $_ );");
+        foo.insertBefore("System.out.println(\">>in\");");
+        foo.insertAfter("System.out.println(\"<<out\");");
         ctClass.writeFile("./log/out");
 
 
