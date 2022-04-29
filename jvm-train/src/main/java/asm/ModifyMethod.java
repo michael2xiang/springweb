@@ -53,7 +53,5 @@ public class ModifyMethod {
         cr.accept(cv, 0);
         final byte[] bytesModify = cw.toByteArray();
         FileUtils.writeByteArrayToFile(new File("./log/out/Hello2.class"), bytesModify);
-
-
     }
 }

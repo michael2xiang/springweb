@@ -40,6 +40,7 @@ public class AllInOneDemo {
         return sum;
     }
 
+
     public Integer foreachDemo(int[] arr) {
         int sum = 0;
         for (int i : arr) {
